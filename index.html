@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mahora Coffee | Coming Soon</title>
+
+<meta name="description" content="Mahora Coffee - Specialty coffee roasted with care. Launching soon.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+:root{
+    --bg:#f7f4ee;
+    --olive:#6b7343;
+    --brown:#4a3424;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Georgia, serif;
+    background: var(--bg);
+    color: var(--brown);
+}
+
+.banner{
+    width:100%;
+    position:relative;
+}
+
+.banner img{
+    width:100%;
+    display:block;
+}
+
+.separator{
+    position:absolute;
+    bottom:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--bg);
+    padding:0 15px;
+    font-size:32px;
+    color:var(--olive);
+}
+
+.content{
+    text-align:center;
+    padding:80px 20px 100px;
+}
+
+.tagline{
+    font-size:2rem;
+    margin-bottom:30px;
+    font-weight:400;
+}
+
+.coming-soon{
+    font-size:4rem;
+    color:var(--olive);
+    font-weight:700;
+}
+
+.footer{
+    text-align:center;
+    padding:30px 20px;
+    border-top:1px solid rgba(0,0,0,0.05);
+}
+
+.footer p{
+    font-size:0.95rem;
+}
+
+@media(max-width:768px){
+
+    .tagline{
+        font-size:1.4rem;
+    }
+
+    .coming-soon{
+        font-size:2.5rem;
+    }
+
+    .separator{
+        font-size:24px;
+    }
+
+    .content{
+        padding:60px 20px 80px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<section class="banner">
+    <img src="images/mahora-banner.png" alt="Mahora Coffee">
+    <div class="separator">☕</div>
+</section>
+
+<section class="content">
+    <p class="tagline">
+        Something exceptional is brewing.
+    </p>
+
+    <h1 class="coming-soon">
+        Coming Soon
+    </h1>
+</section>
+
+<footer class="footer">
+    <p>
+        © 2026 Mahora Coffee. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
