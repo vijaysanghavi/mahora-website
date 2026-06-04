@@ -63,6 +63,45 @@ body{
     font-weight:400;
 }
 
+.pour-over{
+    position:relative;
+    width:120px;
+    height:120px;
+    margin:30px auto;
+}
+
+.dripper{
+    width:50px;
+    height:30px;
+    border:3px solid #6b7343;
+    border-top:none;
+    margin:0 auto;
+    clip-path:polygon(0 0,100% 0,75% 100%,25% 100%);
+}
+
+.cup{
+    width:60px;
+    height:35px;
+    border:3px solid #6b7343;
+    border-radius:0 0 12px 12px;
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.drop{
+    width:8px;
+    height:8px;
+    background:#4a3424;
+    border-radius:50%;
+    position:absolute;
+    left:50%;
+    top:35px;
+    transform:translateX(-50%);
+    animation:drip 1.5s infinite;
+}
+
 .coming-soon{
     font-size:4rem;
     color:var(--olive);
@@ -77,6 +116,22 @@ body{
 
 .footer p{
     font-size:0.95rem;
+}
+
+@keyframes drip{
+    0%{
+        top:35px;
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        top:85px;
+        opacity:0;
+    }
 }
 
 @media(max-width:768px){
@@ -111,7 +166,12 @@ body{
     <p class="tagline">
         Something exceptional is brewing.
     </p>
-
+    <div class="pour-over">
+        <div class="dripper"></div>
+        <div class="drop"></div>
+        <div class="cup"></div>
+    </div>
+    
     <h1 class="coming-soon">
         Coming Soon
     </h1>
