@@ -175,35 +175,28 @@ body{
                   stroke="#6b7343"
                   stroke-width="3"/>
 
-            <!-- Spiral ribs -->
-            <path d="M38 28 L48 58"
-                  stroke="#6b7343"
-                  stroke-width="2"
-                  opacity="0.6"/>
-
-            <path d="M55 24 L55 60"
-                  stroke="#6b7343"
-                  stroke-width="2"
-                  opacity="0.6"/>
-
-            <path d="M72 28 L62 58"
-                  stroke="#6b7343"
-                  stroke-width="2"
-                  opacity="0.6"/>
-
             <!-- Coffee drop -->
-            <circle cx="55" cy="70" r="4" fill="#4a3424">
-                <animate
-                    attributeName="cy"
-                    values="70;95;70"
-                    dur="1.5s"
-                    repeatCount="indefinite"/>
-                <animate
-                    attributeName="opacity"
-                    values="0;1;0"
-                    dur="1.5s"
-                    repeatCount="indefinite"/>
-            </circle>
+    <g>
+        <path d="M55 0
+             C58 4,60 7,60 10
+             A5 5 0 1 1 50 10
+             C50 7,52 4,55 0 Z"
+          fill="#4a3424">
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 70;0 92"
+                dur="2.2s"
+                repeatCount="indefinite"/>
+
+            <animate
+                attributeName="opacity"
+                values="0;1;1;0"
+                dur="2.2s"
+                repeatCount="indefinite"/>
+        </path>
+    </g>
 
             <!-- Cup -->
             <path d="M35 95
