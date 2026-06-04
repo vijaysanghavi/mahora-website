@@ -41,33 +41,19 @@ body{
     display:block;
 }
 
-.separator{
-    position:absolute;
-    bottom:-18px;
-    left:50%;
-    transform:translateX(-50%);
-    background:var(--bg);
-    padding:0 15px;
-    font-size:32px;
-    color:var(--olive);
-}
-
 .content{
     text-align:center;
     padding:80px 20px 100px;
 }
 
 .tagline{
-    font-size:2rem;
-    margin-bottom:30px;
-    font-weight:400;
+    margin-bottom:10px;
 }
 
 .pour-over{
-    position:relative;
-    width:160px;
-    height:160px;
-    margin:25px auto;
+    display:flex;
+    justify-content:center;
+    margin:10px 0;
 }
 
 .dripper{
@@ -126,9 +112,7 @@ body{
 }
 
 .coming-soon{
-    font-size:4rem;
-    color:var(--olive);
-    font-weight:700;
+    margin-top:10px;
 }
 
 .footer{
@@ -166,10 +150,6 @@ body{
     .coming-soon{
         font-size:2.5rem;
     }
-
-    .separator{
-        font-size:24px;
-    }
 }
 
 </style>
@@ -181,18 +161,68 @@ body{
 </section>
 
 <section class="content">
+
     <p class="tagline">
         Something exceptional is brewing.
     </p>
+
     <div class="pour-over">
-        <div class="dripper"></div>
-        <div class="drop"></div>
-        <div class="cup"></div>
+        <svg width="110" height="120" viewBox="0 0 110 120" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- V60 Cone -->
+            <path d="M30 20 L80 20 L60 65 L50 65 Z"
+                  fill="none"
+                  stroke="#6b7343"
+                  stroke-width="3"/>
+
+            <!-- Spiral ribs -->
+            <path d="M38 28 L48 58"
+                  stroke="#6b7343"
+                  stroke-width="2"
+                  opacity="0.6"/>
+
+            <path d="M55 24 L55 60"
+                  stroke="#6b7343"
+                  stroke-width="2"
+                  opacity="0.6"/>
+
+            <path d="M72 28 L62 58"
+                  stroke="#6b7343"
+                  stroke-width="2"
+                  opacity="0.6"/>
+
+            <!-- Coffee drop -->
+            <circle cx="55" cy="70" r="4" fill="#4a3424">
+                <animate
+                    attributeName="cy"
+                    values="70;95;70"
+                    dur="1.5s"
+                    repeatCount="indefinite"/>
+                <animate
+                    attributeName="opacity"
+                    values="0;1;0"
+                    dur="1.5s"
+                    repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Cup -->
+            <path d="M35 95
+                     L75 95
+                     L75 115
+                     Q75 120 70 120
+                     L40 120
+                     Q35 120 35 115 Z"
+                  fill="none"
+                  stroke="#6b7343"
+                  stroke-width="3"/>
+
+        </svg>
     </div>
-    
+
     <h1 class="coming-soon">
         Coming Soon
     </h1>
+
 </section>
 
 <footer class="footer">
