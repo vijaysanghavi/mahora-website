@@ -65,20 +65,43 @@ body{
 
 .pour-over{
     position:relative;
-    width:120px;
-    height:120px;
-    margin:30px auto;
+    width:160px;
+    height:160px;
+    margin:25px auto;
 }
 
 .dripper{
-    width:50px;
-    height:30px;
-    border:3px solid #6b7343;
-    border-top:none;
+    position:relative;
+    width:70px;
+    height:55px;
     margin:0 auto;
-    clip-path:polygon(0 0,100% 0,75% 100%,25% 100%);
+    border-left:4px solid #6b7343;
+    border-right:4px solid #6b7343;
+    border-bottom:4px solid #6b7343;
+    clip-path:polygon(0 0,100% 0,78% 100%,22% 100%);
 }
 
+.dripper:before,
+.dripper:after{
+    content:'';
+    position:absolute;
+    top:10px;
+    width:2px;
+    height:30px;
+    background:#6b7343;
+    opacity:.5;
+}
+
+.dripper:before{
+    left:22px;
+    transform:rotate(-15deg);
+}
+
+.dripper:after{
+    right:22px;
+    transform:rotate(15deg);
+}
+    
 .cup{
     width:60px;
     height:35px;
