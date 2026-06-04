@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mahora Coffee | Coming Soon</title>
-
-<meta name="description" content="Mahora Coffee - Specialty coffee roasted with care. Launching soon.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+    
+<meta name="description" content="Mahora Coffee - Specialty coffee roasted in Small Batches. Launching soon.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    
 <style>
 
 :root{
@@ -37,13 +38,16 @@ body{
 }
 
 .banner img{
-    width:100%;
-    display:block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .content{
     text-align:center;
     padding:80px 20px 100px;
+    animation:fadeUp 1s ease;
 }
 
 .tagline{
@@ -113,8 +117,19 @@ body{
 
 .coming-soon{
     margin-top:10px;
+    font-size:clamp(3rem,8vw,5rem);
+    color:var(--olive);
+    font-weight:700;
 }
 
+    .subtext{
+    margin-top:10px;
+    font-size:1rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#6b7343;
+}
+    
 .footer{
     text-align:center;
     padding:30px 20px;
@@ -141,14 +156,21 @@ body{
     }
 }
 
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 @media(max-width:768px){
 
     .tagline{
         font-size:1.4rem;
-    }
-
-    .coming-soon{
-        font-size:2.5rem;
     }
 }
 
@@ -163,11 +185,12 @@ body{
 <section class="content">
 
     <p class="tagline">
-        Something exceptional is brewing.
+        From bean to brew.
+Something exceptional is brewing.
     </p>
 
     <div class="pour-over">
-        <svg width="110" height="120" viewBox="0 0 110 120" xmlns="http://www.w3.org/2000/svg">
+        <svg width="140" height="150" viewBox="0 0 110 120" xmlns="http://www.w3.org/2000/svg">
 
             <!-- V60 Cone -->
             <path d="M30 20 L80 20 L60 65 L50 65 Z"
@@ -215,7 +238,9 @@ body{
     <h1 class="coming-soon">
         Coming Soon
     </h1>
-
+    <p class="subtext">
+        Specialty Coffee Roasted in Small Batches
+    </p>
 </section>
 
 <footer class="footer">
